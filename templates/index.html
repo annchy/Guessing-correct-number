@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess the random number</title>
+</head>
+<body>
+	<center>
+      <form action='/predict' method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="first_name"><b>Guess the Number here</b></label>
+            <br>
+          <input   id="first_name" name='number'type="text" class="validate">
+        </div>
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Submit</button>
+      </div>
+    </form>
+	</center>
+      <br><h4 align="center"><b>{{pred}}</b></h4>
+        <br>
+        
+</body>
+</html>
