@@ -13,8 +13,9 @@ def index():
 def random():
     import random
     rand_num = random.randint(0,10)
-    values=[int(x) for x in request.form.values()] 
-    values=[np.array(values)]
+    values=[x for x in request.form.values()] 
+    values = "". join(values)
+    values = int(values)
     if values == rand_num:
         return render_template('index.html', pred = 'Congratulations, you predicted correct value')
     else:
